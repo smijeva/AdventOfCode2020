@@ -6,9 +6,8 @@ TREE = '#'
 
 def part1(step_right, step_down):
     with open('input3.txt') as file:
-        trees = [line[(i * step_right) % TREES_REPEAT_PATTERN] == TREE
-                 for i, line in enumerate(file)
-                 if i % step_down == 0]
+        trees = [line[((i//step_down) * step_right) % TREES_REPEAT_PATTERN] == TREE and i % step_down == 0
+                 for i, line in enumerate(file)]
     return sum(trees)
 
 
@@ -17,7 +16,6 @@ def part2():
     print(down1_trees)
     print(part1(1, 2))
     print(math.prod(down1_trees) * part1(1, 2))
-
 
 print(part1(3, 1))
 part2()
