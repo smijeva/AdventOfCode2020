@@ -1,3 +1,9 @@
+"""
+Day 3 was about counting trees in the matrix. The list comprehension solution does not seem particularly elegant this
+time and it required a lot of effort to figure out why it is not working (figuring division by step_down part was
+particularly difficult and I consider it un-elegant.)
+"""
+
 import math
 
 TREES_REPEAT_PATTERN = 31
@@ -16,6 +22,7 @@ def part2():
     print(down1_trees)
     print(part1(1, 2))
     print(math.prod(down1_trees) * part1(1, 2))
+
 
 print(part1(3, 1))
 part2()
