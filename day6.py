@@ -1,3 +1,9 @@
+"""
+Day 6 was rather simple for Python solution thanks to native set operations. The goal of first part was to compute
+union of group's answers whereas second part was pretty much same, but intersection was computed instead of a union.
+"""
+
+
 def part1():
     with open('input6.txt') as file:
         content = file.read()
